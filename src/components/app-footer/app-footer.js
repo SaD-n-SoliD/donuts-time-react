@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
-export default class Header extends Component {
-
+export default class AppFooter extends Component {
+	
+	
+	
 	render() {
 		return (
 			<div>
-
+				
 			</div>
 		);
 	}
