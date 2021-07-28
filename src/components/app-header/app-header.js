@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import "./app-header.css";
+
 import logo from "../../images/Logo.png";
 import buy from "../../images/buy.png";
 
