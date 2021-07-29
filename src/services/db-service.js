@@ -8,7 +8,16 @@ export default class DBService {
 
 		return await res.json()
 	}
-	getDonuts() {
-		return this.getResource(this.apiBase)
+	getField(field) {
+		return this.getResource(this.apiBase).then(res => res[field])
+	}
+	getDonutBlocks() {
+		return this.getField('donutBlocks')
+	}
+	getReviews() {
+		return this.getField('reviews')
+	}
+	getDonutCount() {
+		return this.getField('donutCount')
 	}
 }

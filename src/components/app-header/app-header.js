@@ -7,8 +7,6 @@ import buy from "../../images/buy.png";
 
 export default class AppHeader extends Component {
 
-
-
 	render() {
 		return (
 			<header className="header">
