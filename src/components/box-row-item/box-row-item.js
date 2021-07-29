@@ -28,7 +28,9 @@ export default class BoxRowItem extends Component {
 					<p className="box-underdonut__title">
 						<span className="left-dot-word">{data['first_component']}</span>{data['second_component']}
 					</p>
-					<p className="box-underdonut__text">{data['description']}</p>
+					<p className="box-underdonut__text"
+						dangerouslySetInnerHTML={{ __html: data['description'] }}>
+					</p>
 					<div className={'box-price-count idd' + data['id']}>
 						<p className="donut-price">{data['price'] + ' руб'}</p>
 						<div className="donut-count">
