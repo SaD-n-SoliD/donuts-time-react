@@ -1,0 +1,4 @@
+.space-between-flex-container {
+	display: flex;
+	justify-content: space-between;
+}

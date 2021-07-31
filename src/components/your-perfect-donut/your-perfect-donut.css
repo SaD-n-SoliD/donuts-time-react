@@ -37,13 +37,13 @@
 	margin-bottom: 20px;
 }
 .part-name {
-	margin-bottom: 30px;
+	margin-bottom: 23px;
 }
 .part-choise {
 	border-radius: 1px;
 	display: block;
 	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: 13px;
 	color: #3a3233;
 	font-size: 120%;
 	font-weight: 600;
@@ -56,7 +56,6 @@
 }
 .perfect-total {
 	display: flex;
-	/*justify-content: space-between;*/
 	margin: 70px 0;
 }
 .amount-perfect {

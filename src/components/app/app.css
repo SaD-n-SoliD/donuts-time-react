@@ -61,6 +61,10 @@ h2 {
 	color: #3a3233;
 }
 
+.hidden {
+	display: none;
+}
+
 @media (max-width: 1400px) {
 	/*================ your-perfect donut 1400 =================================*/
 	.like-block {
@@ -602,7 +606,7 @@ h2 {
 		display: none;
 	}
 	.part-choise {
-		margin-left: 10px;
+		margin-left: 20px;
 		padding-right: 30px;
 	}
 	.your-perfect-donut .hide {

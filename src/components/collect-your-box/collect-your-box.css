@@ -1,14 +1,11 @@
-.collect-your-box {
-
+div.collect-your-box__body {
+	margin-bottom: 50px;
 }
 #collect-your-box-anchor {
 	visibility: hidden;
 	position: relative;
 	bottom: 100px;
 }
-
-.boxhead {}
-.block-title {}
 .cb-title {
 	margin-bottom: 7%;
 }
@@ -46,7 +43,7 @@
 	}
 }
 .sweetness-btn:after {
-		content: '';
+	content: "";
 	display: block;
 	position: relative;
 	right: 10%;
@@ -82,14 +79,9 @@
 	flex-wrap: wrap;
 	flex-grow: 10;
 	flex-basis: 800px;
-	/*max-width: 600px;*/
-	/*flex-grow: 0;
-	flex-basis: 600px;*/
 	margin-right: 8%;
 }
-.box-row-element:first-child {
-	/*margin-right: 10%;*/
-}
+
 .box-row-element {
 	max-width: 400px;
 	width: 45%;
@@ -101,14 +93,12 @@
 	/*время меняй и в js: box-calc.js (timeOut) ~ 82 строка */
 	transition-duration: 0.5s;
 	transition-timing-function: linear;
-	/*display: none;*/
 }
 .abs {
 	position: absolute;
 	left: -500%;
 }
 .box-row-element.active {
-	/*display: block;*/
 	transition-duration: 0.5s;
 	transition-property: opacity;
 	opacity: 1;
@@ -116,13 +106,12 @@
 	z-index: 0;
 	pointer-events: auto;
 }
-.sweet {}
-.non-sweet {}
+
 .box-dunut {
 	margin-bottom: 40px;
 	height: 330px;
 }
-.box-donut__img {}
+
 .box-underdonut-m {
 	max-width: 300px;
 	margin: 0 auto;
@@ -139,7 +128,7 @@
 	padding-right: 10px;
 }
 .left-dot-word:after {
-	content: '';
+	content: "";
 	display: inline-block;
 	vertical-align: middle;
 	margin-left: 10px;
@@ -152,7 +141,7 @@
 	padding-right: 5px;
 }
 .lil-left-dot-word:after {
-	content: '';
+	content: "";
 	display: inline-block;
 	vertical-align: middle;
 	margin-left: 5px;
@@ -174,7 +163,6 @@
 	font-size: 170%;
 	font-weight: 800;
 	color: #3a3233;
-	
 }
 .donut-count {
 	display: flex;
@@ -182,17 +170,15 @@
 	justify-content: center;
 	margin-right: 40px;
 }
-.countform {
-	/*position: relative;*/
-}
+
 .donut-count-button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	/*display: block;*/
-	position: relative;	
+	position: relative;
 	background-color: transparent;
-	border-radius: 50%;	
+	border-radius: 50%;
 	font-size: 0;
 }
 .underdonut__button {
@@ -210,52 +196,29 @@
 .underdonut__button .plus-paint {
 	height: 11px;
 	position: absolute;
-	/*top: 5.5px;
-	right: 10.25px;*/
 }
-.clist-count-button .minus-paint{
+.clist-count-button .minus-paint {
 	width: 8px;
 }
-.clist-count-button .plus-paint{
+.clist-count-button .plus-paint {
 	height: 8px;
 	position: absolute;
-	/*top: 4px;
-	right: 7.25px;*/
 }
-.minus-paint,
-.plus-paint {
-	/*border: 1px solid #73cbe5;*/
-}
+
 .minus-paint {
-	/*position: absolute;
-	bottom: 50%;
-	left: 25%;*/
 	height: 1.5px;
-	/*width: 11px;*/
 	border-radius: 1px;
 	background-color: #73cbe5;
-	/*margin: auto;*/
-	/*transform: translateY(1px);*/
 	font-size: 0;
-} 
+}
 .plus-paint {
-	/*position: absolute;
-	top: 25%;
-	right: 50%;*/
 	width: 1.5px;
-	/*height: 50%;*/
 	border-radius: 1px;
 	background-color: #73cbe5;
-	/*margin: auto 0;*/
-	/*transform: translate(0.9px);*/
 	font-size: 0;
 }
-.clist-count-button .plus-paint {
-	/*transform: translate(0.5px);*/
-}
-.underdonut-img {}
+
 .undercount-var {
-	/*pointer-events: none;*/
 	text-align: center;
 	max-width: 15px;
 	display: inline;
@@ -282,8 +245,6 @@
 	margin-bottom: 50px;
 }
 .count-in-box-form {
-	/*width: 35px;
-	height: 35px;*/
 	margin-right: 20px;
 	text-align: center;
 	display: flex;
@@ -297,10 +258,8 @@
 	border: 2px solid #81cde4;
 	color: #81cde4;
 	border-radius: 50%;
-	/*color: inherit;*/
 	font-weight: 800;
 	transition-duration: 0.65s;
-	/*transition-property: background-color, color;*/
 }
 .count-in-box-btn.active {
 	transition-duration: 0.65s;
@@ -324,7 +283,6 @@
 .choose-list {
 	min-width: 270px;
 	height: 180px;
-	/*border: 1px solid #cc0;*/
 	overflow-y: scroll;
 	padding-top: 5px;
 	margin-bottom: 50px;
@@ -341,7 +299,6 @@
 	color: #6d6b6c;
 	font-weight: 600;
 	white-space: nowrap;
-	/*margin-right: 5px;*/
 }
 .clist-element-count {
 	display: flex;
@@ -349,8 +306,6 @@
 	margin-right: 5%;
 }
 .clist-countform {
-/*	display: flex;
-	align-items: flex-end;*/
 	position: relative;
 	width: 18px;
 	height: 18px;
@@ -378,8 +333,6 @@
 	font-weight: 800;
 	margin-bottom: 50px;
 }
-.amount-var {}
-.clist-total-form {}
 .view-all {
 	display: flex;
 	text-align: center;
