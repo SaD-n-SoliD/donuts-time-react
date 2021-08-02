@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
-//import './counter-with-buttons.css';
+import style from './counter-with-buttons.module.css';
+
+import plus from "../../images/plus.svg";
+import minus from "../../images/minus.svg";
 
 // import CounterWithButtons from '../counter-with-buttons';
 export default class CounterWithButtons extends Component {
@@ -8,19 +11,35 @@ export default class CounterWithButtons extends Component {
 
 
 	render() {
+		const { width, height, addClasses } = this.props;
+		const boxSize = {
+			height,
+			width: width || height * 3.6
+		}
+		const img = {
+			width: height,
+			borderRadius: '50%',
+		}
+		const fontSize = { fontSize: `${height * 0.85}px` };
 		return (
-			<div className="perfect-donut-count donut-count">
-				<div className="countform">
-					<button className="donut-count-button underdonut__button perfect-minus">
-						<span className="minus-paint"></span>
-					</button>
-				</div>
-				<p className="perfect-count-var">1</p>
-				<div className="countform">
-					<button className="donut-count-button underdonut__button perfect-plus">
-						<span className="minus-paint"></span><span className="plus-paint"></span>
-					</button>
-				</div>
+			<div style={boxSize} className={style['box'] + ' ' + addClasses}>
+
+				<button style={{ width: height }} className={style['button']}>
+					<img style={img} src={minus} alt="-" />
+				</button>
+
+				<input
+					style={fontSize}
+					className={style['counter']}
+					defaultValue="0"
+					readOnly
+					tabIndex="-1"
+				/>
+
+				<button style={{ width: height }} className={style['button']}>
+					<img style={img} src={plus} alt="+" />
+				</button>
+
 			</div>
 		);
 	}

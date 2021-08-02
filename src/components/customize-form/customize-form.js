@@ -18,7 +18,7 @@ export default class CustomizeForm extends Component {
 				<PerfectSelection />
 				<div className="perfect-total">
 					<p className="amount amount-perfect">Итого:<span className="blue"><span className="perfect-amount-var"> 0 </span>руб</span></p>
-					<CounterWithButtons />
+					<CounterWithButtons width={87} height={22} addClasses="perfect-donut-count" />
 				</div>
 				<div className="row-btn perfect-row-btn">
 					<form className="btn-left perfect-btn-left" action="#">

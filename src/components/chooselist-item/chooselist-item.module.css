@@ -1,0 +1,7 @@
+.counter-with-buttons-outer {
+	display: inline-flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	margin-right: 5%;
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import CounterWithButtons from "../counter-with-buttons";
 
 // import './box-row-element.css';
 
@@ -33,19 +33,8 @@ export default class BoxRowItem extends Component {
 					</p>
 					<div className={'box-price-count idd' + data['id']}>
 						<p className="donut-price">{data['price'] + ' руб'}</p>
-						<div className="donut-count">
-							<div className="countform">
-								<button className={'donut-count-button underdonut__button op50 minus-btn idd' + data['id']}>
-									<span className="minus-paint"></span>
-								</button>
-							</div>
-							<input className={'undercount-var idd' + data['id']} defaultValue="0" readOnly tabIndex="-1" />
-							<div className="countform">
-								<button className={'donut-count-button underdonut__button plus-btn idd' + data['id']}>
-									<span className="minus-paint"></span><span className="plus-paint"></span>
-								</button>
-							</div>
-						</div>
+						<CounterWithButtons height={22} addClasses='donut-count' />
+
 					</div>
 				</div>
 			</div>
