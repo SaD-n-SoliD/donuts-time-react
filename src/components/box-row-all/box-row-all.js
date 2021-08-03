@@ -15,16 +15,31 @@ export default class BoxRowAll extends Component {
 	componentDidMount() {
 		this.db.getDonutBlocks().then(donutBlocks => {
 			this.setState({ donutBlocks })
+			this.props.addCounters(
+				this.state.donutBlocks.reduce((acc, el) => {
+					return { ...acc, [el.id]: 0 }
+				}, {})
+			)
 		})
 	}
 
 	render() {
+		const { incCounter, decCounter, incIsPossible, decIsPossible, counters } = this.props;
+
 		return (
 			<div className="box-row-m">
 
 				{
 					this.state.donutBlocks.map(el =>
-						<BoxRowItem data={el} key={el.id} />
+						<BoxRowItem
+							incCounter={incCounter}
+							decCounter={decCounter}
+							incIsPossible={incIsPossible}
+							decIsPossible={decIsPossible}
+							counter={counters[el.id]}
+							data={el}
+							key={el.id}
+						/>
 					)
 				}
 

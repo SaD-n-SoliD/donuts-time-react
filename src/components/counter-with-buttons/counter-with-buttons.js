@@ -11,7 +11,9 @@ export default class CounterWithButtons extends Component {
 
 
 	render() {
-		const { width, height, addClasses } = this.props;
+		const fn = () => { };
+		const { width, height, id, value = 0, addClasses = '', incCounter = fn, decCounter = fn, incIsPossible = fn, decIsPossible = fn } = this.props;
+
 		const boxSize = {
 			height,
 			width: width || height * 3.6
@@ -21,23 +23,50 @@ export default class CounterWithButtons extends Component {
 			borderRadius: '50%',
 		}
 		const fontSize = { fontSize: `${height * 0.85}px` };
+		// console.log(id, decIsPossible);
 		return (
-			<div style={boxSize} className={style['box'] + ' ' + addClasses}>
+			<div style={boxSize} className={style.box + ' ' + addClasses}>
 
-				<button style={{ width: height }} className={style['button']}>
-					<img style={img} src={minus} alt="-" />
+				<button
+					type="button"
+					style={{ width: height }}
+					className={style.button}
+					onClick={() => decCounter(id)}
+				>
+					<img
+						className={decIsPossible(id) ? '' : style.disabled}
+						style={img}
+						src={minus}
+						alt="-"
+					/>
 				</button>
 
-				<input
+				{/* <div
 					style={fontSize}
 					className={style['counter']}
-					defaultValue="0"
+				>
+					{value}
+				</div> */}
+				<input
+					style={fontSize}
+					className={style.counter}
+					value={value}
 					readOnly
 					tabIndex="-1"
 				/>
 
-				<button style={{ width: height }} className={style['button']}>
-					<img style={img} src={plus} alt="+" />
+				<button
+					type="button"
+					style={{ width: height }}
+					className={style.button}
+					onClick={() => incCounter(id)}
+				>
+					<img
+						className={incIsPossible(id) ? '' : style.disabled}
+						style={img}
+						src={plus}
+						alt="+"
+					/>
 				</button>
 
 			</div>

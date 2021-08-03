@@ -20,12 +20,22 @@ export default class Chooselist extends Component {
 	}
 
 	render() {
+		const { counters, incCounter, decCounter, incIsPossible, decIsPossible } = this.props;
+
 		return (
 			<div className="choose-list">
 
 				{
 					this.state.donutBlocks.map(el =>
-						<ChooselistItem data={el} key={el.id} />
+						<ChooselistItem
+							counter={counters[el.id]}
+							incCounter={incCounter}
+							decCounter={decCounter}
+							incIsPossible={incIsPossible}
+							decIsPossible={decIsPossible}
+							data={el}
+							key={el.id}
+						/>
 					)
 				}
 

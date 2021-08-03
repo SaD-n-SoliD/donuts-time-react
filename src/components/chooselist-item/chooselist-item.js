@@ -9,7 +9,8 @@ export default class ChooselistItem extends Component {
 
 
 	render() {
-		const { data } = this.props;
+		const { data, incCounter, decCounter, incIsPossible, decIsPossible, counter } = this.props;
+
 		return (
 			<div className="chooselist-element">
 				<p className="donut-name">
@@ -18,7 +19,16 @@ export default class ChooselistItem extends Component {
 				</p>
 				<div className={style["counter-with-buttons-outer"]}>
 
-					<CounterWithButtons height={16} width={50} />
+					<CounterWithButtons
+						height={16}
+						width={50}
+						incCounter={incCounter}
+						decCounter={decCounter}
+						incIsPossible={incIsPossible}
+						decIsPossible={decIsPossible}
+						id={data.id}
+						value={counter}
+					/>
 
 				</div>
 			</div>

@@ -17,7 +17,9 @@ export default class BoxRowItem extends Component {
 	}
 
 	render() {
-		const { data } = this.props;
+		const { data, incCounter, decCounter, incIsPossible, decIsPossible, counter } = this.props;
+		// console.log(decIsPossible, 'wtf');
+
 		return (
 			<div className={'box-row-element active ' + data['sweetness']}>
 				<div className="box-dunut">
@@ -33,7 +35,16 @@ export default class BoxRowItem extends Component {
 					</p>
 					<div className={'box-price-count idd' + data['id']}>
 						<p className="donut-price">{data['price'] + ' руб'}</p>
-						<CounterWithButtons height={22} addClasses='donut-count' />
+						<CounterWithButtons
+							height={22}
+							addClasses='donut-count'
+							incCounter={incCounter}
+							decCounter={decCounter}
+							incIsPossible={incIsPossible}
+							decIsPossible={decIsPossible}
+							id={data.id}
+							value={counter}
+						/>
 
 					</div>
 				</div>
