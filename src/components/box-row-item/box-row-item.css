@@ -1,0 +1,70 @@
+.box-row-element {
+	max-width: 400px;
+	width: 45%;
+	margin-bottom: 40px;
+}
+.box-row-element-enter {
+	opacity: 0;
+}
+.box-row-element-enter-active {
+	opacity: 1;
+	transition: opacity 500ms linear;
+}
+.box-row-element-exit {
+	opacity: 1;
+}
+.box-row-element-exit-active {
+	opacity: 0;
+	transition: opacity 500ms linear;
+}
+
+.box-dunut {
+	margin-bottom: 40px;
+	height: 330px;
+}
+
+.box-underdonut-m {
+	max-width: 300px;
+	margin: 0 auto;
+	padding-left: 5%;
+}
+
+.box-underdonut__title {
+	color: #3a3233;
+	font-weight: 800;
+	font-size: 150%;
+	margin-bottom: 6%;
+}
+.left-dot-word {
+	padding-right: 10px;
+}
+.left-dot-word:after {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #3a3233;
+}
+.box-underdonut__text {
+	font-size: 95%;
+	margin-bottom: 6%;
+}
+.box-price-count {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+.donut-price {
+	font-size: 170%;
+	font-weight: 800;
+	color: #3a3233;
+}
+.donut-count {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 40px;
+}

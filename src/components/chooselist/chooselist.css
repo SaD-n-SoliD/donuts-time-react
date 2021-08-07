@@ -1,0 +1,13 @@
+.lil-left-dot-word {
+	padding-right: 5px;
+}
+.lil-left-dot-word:after {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #6c6e71;
+}

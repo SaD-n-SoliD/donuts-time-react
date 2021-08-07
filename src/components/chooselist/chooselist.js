@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ChooselistItem from '../chooselist-item';
 import DBService from "../../services/db-service";
 
-//import './chooselist.css';
+import './chooselist.css';
 
 // import Chooselist from '../chooselist';
 export default class Chooselist extends Component {

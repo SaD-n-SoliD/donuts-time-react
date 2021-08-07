@@ -8,12 +8,14 @@ import './collect-your-box.css';
 
 export default class CollectYourBox extends Component {
 
+	min = 0
+	max = 9
+
 	state = {
-		min: 0,
-		max: 9,
 		donutsInBox: 9,
 		currentDonutsInBox: 0,
-		counters: {}
+		counters: {},
+		sweetness: 'all'
 	}
 
 	addCounters = (counters) => {
@@ -40,7 +42,7 @@ export default class CollectYourBox extends Component {
 	}
 
 	decIsPossible = (id) => {
-		return this.state.counters[id] > this.state.min
+		return this.state.counters[id] > this.min
 	}
 
 	incCounter = (id) => {
@@ -55,13 +57,19 @@ export default class CollectYourBox extends Component {
 		this.setState({ donutsInBox })
 	}
 
+	setSweetness = (sweetness) => {
+		this.setState({ sweetness })
+	}
+
 	render() {
 		const { counters } = this.state;
 		return (
 			<div id="collect-your-box" className="collect-your-box">
 				<div className="container">
 					<div className="collect-your-box__body">
-						<BoxHead />
+						<BoxHead
+							setSweetness={this.setSweetness}
+						/>
 						<div className="box-body">
 
 							<BoxRowAll
@@ -71,6 +79,7 @@ export default class CollectYourBox extends Component {
 								incIsPossible={this.incIsPossible}
 								decIsPossible={this.decIsPossible}
 								addCounters={this.addCounters}
+								sweetness={this.state.sweetness}
 							/>
 							<BoxMenu
 								counters={counters}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CounterWithButtons from "../counter-with-buttons";
 
-// import './box-row-element.css';
+import './box-row-item.css';
 
 export default class BoxRowItem extends Component {
 
@@ -18,10 +18,9 @@ export default class BoxRowItem extends Component {
 
 	render() {
 		const { data, incCounter, decCounter, incIsPossible, decIsPossible, counter } = this.props;
-		// console.log(decIsPossible, 'wtf');
 
 		return (
-			<div className={'box-row-element active ' + data['sweetness']}>
+			<div className={`box-row-element ${data['sweetness']}`}>
 				<div className="box-dunut">
 					<img className="box-donut__img" src={this.state.img} alt="" />
 				</div>

@@ -1,0 +1,48 @@
+.sweetness-btn {
+	background-color: transparent;
+	color: #868383;
+	font-size: 150%;
+	font-weight: 600;
+	transition-duration: 0.5s;
+}
+.sweetness-btn.active {
+	color: #52bbd9;
+	transition-duration: 1.5s;
+}
+@keyframes hide {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.sweetness-btn:after {
+	content: "";
+	display: block;
+	position: relative;
+	right: 10%;
+	margin-top: 3px;
+	width: 120%;
+	height: 3px;
+	border-radius: 2px;
+	background-color: #58beda;
+	opacity: 0;
+}
+.sweetness-btn.previous:after {
+	animation: hide 0.7s forwards;
+}
+.sweetness-btn.active:after {
+	animation: show 2s forwards;
+}
+.sweetness-btn:hover {
+	color: #0ee;
+}
