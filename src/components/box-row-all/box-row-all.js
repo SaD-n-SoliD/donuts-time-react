@@ -60,7 +60,6 @@ export default class BoxRowAll extends Component {
 							decIsPossible={decIsPossible}
 							counter={counters[el.id]}
 							data={el}
-							active={this.checkSweetness(el)}
 						/>
 					</CSSTransition>
 				)
