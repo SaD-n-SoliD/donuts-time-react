@@ -42,38 +42,30 @@ export default class BoxRowAll extends Component {
 
 	render() {
 		const { incCounter, decCounter, incIsPossible, decIsPossible, counters, sweetness } = this.props;
-		let items;
-		if (sweetness !== this.state.sweetness) {
-			items = null;
-		} else {
-			items =
-				this.state.donutBlocks.filter(this.checkSweetness).map(el =>
-					<CSSTransition
-						key={el.id}
-						timeout={this.timeout}
-						classNames="box-row-element"
-					>
-						<BoxRowItem
-							incCounter={incCounter}
-							decCounter={decCounter}
-							incIsPossible={incIsPossible}
-							decIsPossible={decIsPossible}
-							counter={counters[el.id]}
-							data={el}
-						/>
-					</CSSTransition>
-				)
-		}
-		return (
-			// <div className="box-row-m">
+		let items = (sweetness !== this.state.sweetness) ? null :
+			this.state.donutBlocks.filter(this.checkSweetness).map(el =>
+				<CSSTransition
+					key={el.id}
+					timeout={this.timeout}
+					classNames="box-row-element"
+				>
+					<BoxRowItem
+						incCounter={incCounter}
+						decCounter={decCounter}
+						incIsPossible={incIsPossible}
+						decIsPossible={decIsPossible}
+						counter={counters[el.id]}
+						data={el}
+					/>
+				</CSSTransition>
+			)
 
+		return (
 			<TransitionGroup
 				className="box-row-m"
 			>
 				{items}
 			</TransitionGroup>
-
-			// </div>
 		);
 	}
 }
