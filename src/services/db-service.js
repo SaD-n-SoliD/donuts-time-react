@@ -1,6 +1,6 @@
 
 export default class DBService {
-	apiBase = 'http://donuts-time-reborn/api';
+	apiBase = process.env.REACT_APP_API_BASE;
 	async getResource(url) {
 		const res = await fetch(url);
 
