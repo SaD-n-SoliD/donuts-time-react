@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CounterWithButtons from '../counter-with-buttons';
 import PerfectSelection from '../perfect-selection';
 
+import like from "../../images/Like.png";
 
 //import './customize-form.css';
 
@@ -13,7 +14,7 @@ export default class CustomizeForm extends Component {
 	render() {
 		return (
 			<div className="customize-donut-block">
-				<div className="like-block"><img className="like__png" src="images/Like.png" alt="" /></div>
+				<div className="like-block"><img className="like__png" src={like} alt="" /></div>
 				<p className="fill-the-box">Дополни коробку своим<br className="show" /> авторским донатом!</p>
 				<PerfectSelection />
 				<div className="perfect-total">
