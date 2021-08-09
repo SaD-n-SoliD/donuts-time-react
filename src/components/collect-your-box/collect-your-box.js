@@ -63,6 +63,10 @@ export default class CollectYourBox extends Component {
 		this.setState({ sweetness })
 	}
 
+	onExpand = () => {
+		this.setState(({ expanded }) => ({ expanded: !expanded }))
+	}
+
 	render() {
 		const { counters, sweetness, expanded } = this.state;
 		return (
@@ -95,7 +99,10 @@ export default class CollectYourBox extends Component {
 
 						</div>
 
-						<Expand />
+						<Expand
+							expanded={expanded}
+							onExpand={this.onExpand}
+						/>
 					</div>
 				</div>
 			</div>

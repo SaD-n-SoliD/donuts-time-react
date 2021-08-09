@@ -9,13 +9,15 @@ export default class Expand extends Component {
 
 
 	render() {
+		const { expanded, onExpand } = this.props;
 		return (
 			<div id="pre-perfect-donut" className="expand">
 				<div className="line"></div>
 				<div className="box-bottom-form">
 					<Button
-						label="Показать всё"
+						label={expanded ? 'Скрыть' : 'Показать всё'}
 						classNames="btn-white box-bottom-btn"
+						onClick={onExpand}
 					/>
 				</div>
 				<div className="line"></div>

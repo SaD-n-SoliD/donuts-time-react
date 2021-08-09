@@ -6,9 +6,14 @@ import './button.css';
 export default class Button extends Component {
 
 	render() {
-		const { classNames, label } = this.props;
+		const { classNames, label, onClick } = this.props;
 		return (
-			<button className={'btn ' + classNames}>{label}</button>
+			<button
+				className={'btn ' + classNames}
+				onClick={onClick}
+			>
+				{label}
+			</button>
 		);
 	}
 }
