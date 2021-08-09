@@ -1,0 +1,19 @@
+.expand {
+	display: flex;
+	text-align: center;
+	align-items: center;
+}
+.line {
+	opacity: 0.5;
+	height: 2px;
+	width: 40%;
+	background: linear-gradient(90deg, #fefefe, #52bbd9, #fefefe);
+}
+.box-bottom-btn {
+	flex-shrink: 0;
+}
+
+.box-bottom-form {
+	display: inline-flex;
+	margin: 5% 4%;
+}

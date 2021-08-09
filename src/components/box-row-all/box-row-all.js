@@ -16,6 +16,12 @@ export default class BoxRowAll extends Component {
 		sweetness: 'all'
 	}
 
+	constructor(props) {
+		super(props);
+		this.shownItems = props.expanded ? undefined : 6
+	}
+
+
 	componentDidMount() {
 		this.db.getDonutBlocks().then(donutBlocks => {
 			this.setState({ donutBlocks })
@@ -43,7 +49,7 @@ export default class BoxRowAll extends Component {
 	render() {
 		const { incCounter, decCounter, incIsPossible, decIsPossible, counters, sweetness } = this.props;
 		let items = (sweetness !== this.state.sweetness) ? null :
-			this.state.donutBlocks.filter(this.checkSweetness).map(el =>
+			this.state.donutBlocks.filter(this.checkSweetness).slice(0, this.shownItems).map(el =>
 				<CSSTransition
 					key={el.id}
 					timeout={this.timeout}

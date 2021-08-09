@@ -19,10 +19,13 @@
 }
 
 .box-dunut {
+	margin-left: 10px;
 	margin-bottom: 40px;
-	height: 330px;
 }
-
+.box-donut__img {
+	height: 330px;
+	/* width: 100%; */
+}
 .box-underdonut-m {
 	max-width: 300px;
 	margin: 0 auto;
