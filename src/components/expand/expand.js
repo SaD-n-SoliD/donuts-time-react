@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '../button';
 
 import './expand.css';
 
@@ -12,7 +13,10 @@ export default class Expand extends Component {
 			<div id="pre-perfect-donut" className="expand">
 				<div className="line"></div>
 				<div className="box-bottom-form">
-					<button className="btn btn-white box-bottom-btn">Показать всё</button>
+					<Button
+						label="Показать всё"
+						classNames="btn-white box-bottom-btn"
+					/>
 				</div>
 				<div className="line"></div>
 			</div>
